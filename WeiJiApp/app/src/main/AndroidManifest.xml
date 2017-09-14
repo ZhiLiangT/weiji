@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mrchen.competition2"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="myApplication.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service android:name="com.example.mrchen.StepCounterService" />
+
+        <activity
+            android:name="com.example.mrchen.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/WeijiMain"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.mrchen.TeamCompetitionActivity" />
+        <activity android:name="com.example.mrchen.PersonCompetitionActivity" />
+        <activity android:name="com.example.mrchen.CreateCompetitionActivity" />
+        <activity android:name="com.example.mrchen.PsCpDetailActivity"></activity>
+        <activity android:name="com.example.mrchen.SettingsActivity" />
+        <activity
+            android:name="com.example.mrchen.StepCounterActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.mrchen.RunRecordActivity" />
+        <activity android:name="com.example.mrchen.RunInFoActivity"></activity>
+    </application>
+
+</manifest>
